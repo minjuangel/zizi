@@ -697,7 +697,7 @@ function show_menu() {
     clear
     figlet "UDP ZIVPN" | lolcat
     
-    echo -e "${YELLOW}╔═══════════// ${CYAN}ADRX VPN STORE${YELLOW} //═════════════╗${NC}"
+    echo -e "${YELLOW}╔═══════════// ${CYAN}____ADRX VPN STORE____${YELLOW} //═════════════╗${NC}"
     _draw_info_panel
     _draw_service_status
     echo -e "${YELLOW}║                                                    ║${NC}"
