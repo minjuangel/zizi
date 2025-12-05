@@ -493,9 +493,9 @@ function _draw_info_panel() {
     os_info=${os_info:-"N/A"}
 
     local ip_data
-    ip_data=$(curl -s ipinfo.io)
-    ip_info=$(echo "$ip_data" | jq -r '.ip // "N/A"')
-    isp_info=$(echo "$ip_data" | jq -r '.org // "N/A"')
+    ip_data=$(curl -s ip-api.com/json)
+    ip_info=$(curl -4 -s ifconfig.me || echo "N/A")
+    isp_info=$(echo "$ip_data" | jq -r '.org // "N/A"' 2>/dev/null)
     ip_info=${ip_info:-"N/A"}
     isp_info=${isp_info:-"N/A"}
 
